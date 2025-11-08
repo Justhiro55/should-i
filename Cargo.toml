@@ -2,6 +2,14 @@
 name = "should-i"
 version = "0.1.0"
 edition = "2021"
+authors = ["Your Name <your.email@example.com>"]
+description = "A CLI tool to help you make decisions by consulting the yesno.wtf API"
+readme = "README.md"
+homepage = "https://github.com/yourusername/should-i"
+repository = "https://github.com/yourusername/should-i"
+license = "MIT OR Apache-2.0"
+keywords = ["cli", "decision", "yes-no", "yesno"]
+categories = ["command-line-utilities"]
 
 [dependencies]
 clap = { version = "4.5", features = ["derive"] }
