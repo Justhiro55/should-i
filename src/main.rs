@@ -20,6 +20,7 @@ struct Args {
 #[derive(Debug, Deserialize)]
 struct YesNoResponse {
     answer: String,
+    #[allow(dead_code)]
     forced: bool,
     image: String,
 }
