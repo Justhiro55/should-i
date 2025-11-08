@@ -1,8 +1,13 @@
 # should-i
 
-Ask the universe for guidance on your decisions! 🎲
+[![Crates.io](https://img.shields.io/crates/v/should-i.svg)](https://crates.io/crates/should-i)
+[![CI](https://github.com/Justhiro55/should-i/workflows/CI/badge.svg)](https://github.com/Justhiro55/should-i/actions)
+[![License](https://img.shields.io/badge/license-MIT%2FApache--2.0-blue.svg)](LICENSE)
+[![Rust](https://img.shields.io/badge/rust-1.81%2B-orange.svg)](https://www.rust-lang.org/)
 
-A simple CLI tool that consults the [yesno.wtf](https://yesno.wtf) API to help you make yes/no decisions.
+> A CLI tool to help you make decisions by asking the universe 🎲
+
+Consult the [yesno.wtf](https://yesno.wtf) API for instant yes/no/maybe answers to life's toughest questions.
 
 ## Installation
 

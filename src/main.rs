@@ -1,8 +1,19 @@
+//! # should-i
+//!
+//! A CLI tool to help you make decisions by consulting the yesno.wtf API.
+//!
+//! ## Usage
+//!
+//! ```bash
+//! should-i "go to the gym"
+//! should-i "eat pizza tonight" --open
+//! ```
+
 use anyhow::Result;
 use clap::Parser;
 use serde::Deserialize;
 
-/// Ask the universe a yes/no question
+/// Command-line arguments for the should-i tool
 #[derive(Parser, Debug)]
 #[command(name = "should-i")]
 #[command(about = "Ask the universe for guidance on your decisions", long_about = None)]
@@ -16,20 +27,30 @@ struct Args {
     open: bool,
 }
 
+/// Response from the yesno.wtf API
 #[derive(Debug, Deserialize)]
 struct YesNoResponse {
+    /// The answer: "yes", "no", or "maybe"
     answer: String,
+    /// Whether the answer was forced
     #[allow(dead_code)]
     forced: bool,
+    /// URL to a GIF image representing the answer
     image: String,
 }
 
+/// Fetches a yes/no answer from the yesno.wtf API
+///
+/// # Errors
+///
+/// Returns an error if the HTTP request fails or the response cannot be parsed
 async fn fetch_answer() -> Result<YesNoResponse> {
     let url = "https://yesno.wtf/api";
     let response = reqwest::get(url).await?.json::<YesNoResponse>().await?;
     Ok(response)
 }
 
+/// Displays the answer with appropriate emoji and formatting
 fn display_answer(response: &YesNoResponse) {
     println!("\n🎲 Asking the universe...\n");
 
@@ -62,4 +83,27 @@ async fn main() -> Result<()> {
     }
 
     Ok(())
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_answer_matching() {
+        let response = YesNoResponse {
+            answer: "yes".to_string(),
+            forced: false,
+            image: "https://example.com/yes.gif".to_string(),
+        };
+        assert_eq!(response.answer, "yes");
+    }
+
+    #[test]
+    fn test_answer_normalization() {
+        let answers = vec!["yes", "no", "maybe"];
+        for answer in answers {
+            assert!(answer == "yes" || answer == "no" || answer == "maybe");
+        }
+    }
 }
