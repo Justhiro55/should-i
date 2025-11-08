@@ -6,11 +6,20 @@ A simple CLI tool that consults the [yesno.wtf](https://yesno.wtf) API to help y
 
 ## Installation
 
+### Using Cargo
+
 ```bash
 cargo install should-i
 ```
 
-Or from source:
+### Using Homebrew
+
+```bash
+brew tap Justhiro55/tap
+brew install should-i
+```
+
+### From source
 
 ```bash
 git clone https://github.com/Justhiro55/should-i
