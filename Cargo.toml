@@ -1,6 +1,6 @@
 [package]
 name = "should-i"
-version = "0.1.2"
+version = "0.1.3"
 edition = "2021"
 authors = ["Justhiro55"]
 description = "A CLI tool to help you make decisions by consulting the yesno.wtf API"
