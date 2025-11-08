@@ -15,19 +15,23 @@ cargo install --path .
 ## Usage
 
 ```bash
-should-i "go to the gym"
-should-i "eat pizza tonight"
-should-i "勉強する"
-```
+$ should-i "buy a new laptop"
 
-### Example Output
-
-```
 🎲 Asking the universe...
 
 ✅ YES! Do it! 🎉
 
 🖼️  https://yesno.wtf/assets/yes/2.gif
+```
+
+```bash
+$ should-i "eat pizza tonight"
+
+🎲 Asking the universe...
+
+❌ NO! Don't do it! 🚫
+
+🖼️  https://yesno.wtf/assets/no/0.gif
 ```
 
 ### Options
