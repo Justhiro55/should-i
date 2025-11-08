@@ -8,6 +8,8 @@
 
 > A CLI tool to help you make decisions by asking the universe 🎲
 
+<img src="documents/should-i.png" alt="should-i demo" width="450">
+
 Consult the [yesno.wtf](https://yesno.wtf) API for instant yes/no/maybe answers to life's toughest questions.
 
 ## Installation
