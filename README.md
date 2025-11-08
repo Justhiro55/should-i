@@ -66,4 +66,4 @@ should-i "take a break" --open
 
 ## License
 
-MIT OR Apache-2.0
+Licensed under either of MIT or Apache-2.0 at your option. See [LICENSE](LICENSE) for details.
