@@ -16,7 +16,6 @@ struct Args {
     open: bool,
 }
 
-/// API レスポンスの構造体
 #[derive(Debug, Deserialize)]
 struct YesNoResponse {
     answer: String,
@@ -25,14 +24,12 @@ struct YesNoResponse {
     image: String,
 }
 
-/// yesno.wtf API にリクエストを送信
 async fn fetch_answer() -> Result<YesNoResponse> {
     let url = "https://yesno.wtf/api";
     let response = reqwest::get(url).await?.json::<YesNoResponse>().await?;
     Ok(response)
 }
 
-/// 回答を整形して表示
 fn display_answer(response: &YesNoResponse) {
     println!("\n🎲 Asking the universe...\n");
 
@@ -51,16 +48,12 @@ fn display_answer(response: &YesNoResponse) {
 async fn main() -> Result<()> {
     let args = Args::parse();
 
-    // 質問を結合して表示（使わないけど、ユーザーの質問を受け取ったことを示す）
     let _question = args.question.join(" ");
 
-    // API にリクエスト
     let response = fetch_answer().await?;
 
-    // 結果を表示
     display_answer(&response);
 
-    // --open オプションが指定されていたらブラウザで開く
     if args.open {
         println!("🌐 Opening in browser...\n");
         if let Err(e) = webbrowser::open(&response.image) {
