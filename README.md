@@ -7,6 +7,12 @@ A simple CLI tool that consults the [yesno.wtf](https://yesno.wtf) API to help y
 ## Installation
 
 ```bash
+cargo install should-i
+```
+
+Or from source:
+
+```bash
 git clone https://github.com/yourusername/should-i
 cd should-i
 cargo install --path .
