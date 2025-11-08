@@ -13,7 +13,7 @@ cargo install should-i
 Or from source:
 
 ```bash
-git clone https://github.com/yourusername/should-i
+git clone https://github.com/Justhiro55/should-i
 cd should-i
 cargo install --path .
 ```

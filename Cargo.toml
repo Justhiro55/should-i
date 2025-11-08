@@ -1,12 +1,12 @@
 [package]
 name = "should-i"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2021"
-authors = ["Your Name <your.email@example.com>"]
+authors = ["Justhiro55"]
 description = "A CLI tool to help you make decisions by consulting the yesno.wtf API"
 readme = "README.md"
-homepage = "https://github.com/yourusername/should-i"
-repository = "https://github.com/yourusername/should-i"
+homepage = "https://github.com/Justhiro55/should-i"
+repository = "https://github.com/Justhiro55/should-i"
 license = "MIT OR Apache-2.0"
 keywords = ["cli", "decision", "yes-no", "yesno", "random"]
 categories = ["command-line-utilities"]
